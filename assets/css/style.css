@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+
 }
 
 .center-item {
@@ -9,4 +11,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 80%;
+}
+
+button {
+    padding: 6px;
+    border: 1px solid lightslategray;
+    border-radius: 4px;
+    cursor: pointer;
 }
