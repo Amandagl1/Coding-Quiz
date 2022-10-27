@@ -11,90 +11,88 @@
 
 <main>
 
-    <a href="#">View Highscores</a>
+    <!--Div that holds the highscores link and timer-->
+    <div id="main">
+        <a href="#">View Highscores</a>
+        <p class="time" style="text-align:end; margin: 0; font-weight: bold;">Time: 75</p>
+    </div>
+    
+    <!--Header that is displayed as the default content, along with some text and a button-->
+<section class="center-item display-center">
 
-
-    <header>
-        <h1>Coding Quiz Challenge</h1>
+    <header style="font-size: 22px;">
+        <h1>Coding Quiz Challenge!</h1>
     </header>
-
-    <section class="center-item">
-        <p>Try to answer the following code-related questions within the time limit.
-           Keep in mind that incorrect answers will penalize your scoretime by ten seconds!
+    
+        <p style="padding: 10px;">
+            Try to answer the following code-related questions within the time limit.
+           Keep in mind that incorrect answers will penalize your score time by ten seconds!
         </p>
         <button>Start Quiz</button>
 
-    <h5 class="time" style="text-align:end;"></h5>
-    </section>
-    <p class="p-ol" class="center-item">
-        <h2>Commonly used date types DO NOT include:</h2>
-        <ol id="first-child-ol">
-            
-            <!--Correct answer (alerts)-->
-            <li data-choice="Wrong">strings</li>
-            <li data-choice="Wrong">boolean</li>
-            <li data-choice="Correct!">alerts</li>
-            <li data-choice="Wrong">numbers</li>
+</section>
 
-        </ol>
+<!--Hides all the quiz questions-->
+<section class="display-center">
 
+    <p id="p1">
+        <ol id="first-ol"></ol>
     </p>
 
-    <p class="p-ol" class="center-item">
+    <p class="p-ol">
         <h2>The condition in an if / else statement is enclosed within __________.</h2>
         <ol id="second-child-ol">
             <!--Correct answer(parentheses)-->
-            <li data-choice="Wrong"></li>>quotes</li>
-            <li data-choice="Wrong"></li>>curly brackets</li>
-            <li data-choice="Correct!"></li>>parentheses</li>
-            <li data-choice="Wrong"></li>>square brackets</li>
-
+            <li data-choice="Wrong">quotes</li>
+            <li data-choice="Wrong">curly brackets</li>
+            <li data-choice="Correct!">parentheses</li>
+            <li data-choice="Wrong">square brackets</li>
         </ol>
 
     </p>
 
-    <p class="p-ol" class="center-item">      
+    <p class="p-ol">      
         <h2>Arrays in JavaScript can be used to store __________.</h2>
         <ol id="third-child-ol">
             
          <!--Correct answer (all of the above)-->
-        <li data-choice="Wrong"></li>>numbers and strings</li>
-        <li data-choice="Wrong"></li>>other arrays</li>
-        <li data-choice="Wrong"></li>>booleans</li>
-        <li data-choice="Correct!"></li>>all of the above</li>
+        <li data-choice="Wrong">numbers and strings</li>
+        <li data-choice="Wrong">other arrays</li>
+        <li data-choice="Wrong">booleans</li>
+        <li data-choice="Correct!">all of the above</li>
     
         </ol>
     </p>
 
-    <p class="p-ol" class="center-item">      
+    <p class="p-ol">      
         <h2>String values must be enclosed within __________ when being assigned to variables.</h2>
         <ol id="fourth-child-ol">
             
          <!--Correct answer (quotes)-->
-        <li data-choice="Wrong"></li>>commas</li>
-        <li data-choice="Wrong"></li>>curly brackets</li>
-        <li data-choice="Correct!"></li>>quotes</li>
-        <li data-choice="Wrong"></li>>parentheses</li>
+        <li data-choice="Wrong">commas</li>
+        <li data-choice="Wrong">curly brackets</li>
+        <li data-choice="Correct!">quotes</li>
+        <li data-choice="Wrong">parentheses</li>
     
         </ol>
     </p>
 
-    <p class="p-ol" class="center-item">      
+    <p class="p-ol">      
         <h2>A very useful tool used during development and debugging for printing content to the debugger is:</h2>
         <ol id="fifth-child-ol">
             
          <!--Correct answer (console.log)-->
-        <li data-choice="Wrong"></li>>JavaScript</li>
-        <li data-choice="Wrong"></li>>terminal/bash</li>
-        <li data-choice="Wrong"></li>>for loops</li>
-        <li data-choice="Correct!"></li>>console.log</li>
+        <li data-choice="Wrong">JavaScript</li>
+        <li data-choice="Wrong">terminal/bash</li>
+        <li data-choice="Wrong">for loops</li>
+        <li data-choice="Correct!">console.log</li>
     
         </ol>
     </p>
 
     <section id="submit-highscore">
 
-        <h3>All done!</h3>
+        <h2>All done!</h2>
             <form action="">
             <p id="">Your final score is</p>
             <label for="input-initials">Enter initials:</label>
@@ -105,13 +103,13 @@
     </section>
 
     <section>
-        <h3>Highscores</h3>
+        <h2>Highscores</h2>
 
          <div id="last-buttons">
             <button>Go Back</button> <button>Clear Highscores</button>
          </div>
     </section>
-    
+</section>    
     <script src="assets/js/script.js"></script>
 
 </main>

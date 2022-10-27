@@ -2,21 +2,37 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
+    background-color: lightsteelblue;
 
 }
-
 .center-item {
     display: flex;
-    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    align-content: space-around;
+    text-align: center;
+
 }
 
 button {
-    padding: 6px;
+    padding: 3px;
     border: 1px solid lightslategray;
     border-radius: 4px;
     cursor: pointer;
+}
+
+#main {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px;
+}
+
+.display-center {
+    height: 75vh;
+    width: 55%;
+    margin: auto;
+    /* margin-top: 25vh; */
 }
