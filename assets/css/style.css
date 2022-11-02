@@ -34,5 +34,15 @@ button {
     height: 75vh;
     width: 55%;
     margin: auto;
-    /* margin-top: 25vh; */
+
 }
+
+ol {
+    margin: 15px 10px;
+
+}
+
+.hidden {
+    display: none;
+}
+
