@@ -16,7 +16,7 @@ function setTime() {
 
     }
 
- }, 10);
+ }, 1000);
 }
 
 // Function that sends message once timer reaches 0 seconds.
