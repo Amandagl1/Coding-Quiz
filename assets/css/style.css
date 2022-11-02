@@ -24,6 +24,13 @@ button {
     cursor: pointer;
 }
 
+#submit {
+    padding: 3px;
+    border: 1px solid lightslategray;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 #main {
     display: flex;
     justify-content: space-between;

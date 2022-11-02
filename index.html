@@ -40,37 +40,40 @@
      <!-- <p id="p1" class="hidden"></p>
         <ol id="first-ol"></ol> -->
         
-        <section class="hidden">
+        <!-- <section class="hidden">
             <p id="question-text"></p>
                 <ol id="question-choices">
                     <li id="choices"></li>
-                </ol>
-        </section>
+                </ol> -->
+            <!-- <p id="answer-status"></p> -->
+        <!-- </section> -->
 
-    <p id="p1">
-         <ol id="first-ol">
-            <h2>Commonly used datatypes DO NOT include:</h2>
+    <p>
+		<h2>Commonly used datatypes DO NOT include:</h2>
+         <ol>
             <li><button class="wrong">strings</button></li>
             <li><button class="wrong">boolean</button></li>
             <li><button class="correct">alerts</button></li>
             <li><button class="wrong">numbers</button></li> 
          </ol>
+         <p id="answer-status"></p>
+
       </p>
 
   
-    <p class="p2">  
-    <h2>The condition in an if / else statement is enclosed within __________.</h2>
-        <ol id="second-ol">
+    <p>  
+    	<h2>The condition in an if / else statement is enclosed within __________.</h2>
+         <ol>
             <!-- Correct answer is (parentheses) -->
             <li><button class="wrong">quotes</button></li>
             <li><button class="wrong">curly brackets</button></li>
             <li><button class="correct">parentheses</button></li>
             <li><button class="wrong">square brackets</button></li>
-        </ol> 
+         </ol> 
 
     </p>
 
-    <p id="p3" class="hidden">      
+    <p>      
         <h2>Arrays in JavaScript can be used to store __________.</h2>
         <ol id="third-ol">
             
@@ -85,7 +88,7 @@
 
     <p class="p-ol">      
         <h2>String values must be enclosed within __________ when being assigned to variables.</h2>
-        <ol id="fourth-child-ol">
+          <ol id="fourth-child-ol">
             
              <!--Correct answer (quotes)-->
             <li><button class="wrong">commas</button></li>
@@ -93,12 +96,12 @@
             <li><button class="correct">quotes</button></li>
             <li><button class="wrong">parentheses</button></li>
     
-        </ol>
+          </ol>
     </p>
 
-    <p class="p-ol">      
+    <p>      
         <h2>A very useful tool used during development and debugging for printing content to the debugger is:</h2>
-        <ol id="fifth-child-ol">
+          <ol>
             
              <!--Correct answer (console.log)-->
             <li><button class="wrong">JavaScript</button></li>
@@ -106,27 +109,28 @@
             <li><button class="wrong">for loops</button></li>
             <li><button class="correct">console.log</button></li>
     
-        </ol>
+          </ol>
     </p>
 
     <section id="submit-highscore">
 
         <h2 style="margin: 10px">All done!</h2>
-            <form action="">
-              <p id="">Your final score is</p>
-              <label for="input-initials">Enter initials:</label>
-              <input type="text" id="submit-initials" placeholder="Example: A.B." name="input-initials">
-              <button>Submit</button>
+            <form onsubmit="submitInitials(e)">
+              <p id="submit-initials">Your final score is</p>
+               <label for="input-initials">Enter initials:</label>
+               <input type="text" placeholder="Example: A.B." name="input-initials">
+               <input id="submit" type="submit" value="submit">
             </form>
 
     </section>
 
-    <section >
+    <section class="highscore hidden">
         <h2 style="margin: 10px">Highscores</h2>
-        <p><span id="stored-data">Initials</span></p>
-        <div id=""></div>
-         <div id="last-buttons">
-            <button>Go Back</button> <button>Clear Highscores</button>
+        <p>Initials</p>
+         <div id="input-data"></div>
+          <div id="last-buttons">
+            <button>Go Back</button>
+            <button>Clear Highscores</button>
          </div>
     </section>
     

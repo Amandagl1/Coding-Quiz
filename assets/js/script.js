@@ -42,49 +42,44 @@ startQuiz.setAttribute("style", "padding: 10px; border: none; font-size: 18px; b
 //-----Variables for each question-----//
 
 
-var question1 = {
-  questionText: "Commonly used datatypes DO NOT include: ",
-    choices: [
-      // Correct answer is "2. alerts"
-      "1. strings",
-      "2. alerts",
-      "3. numbers",
-      "4. boolean"
-    ],
-    correctChoices: [1],
-}
+// var question1 = {
+//   questionText: "Commonly used datatypes DO NOT include: ",
+//     choices: [
+//       // Correct answer is "2. alerts"
+//       "1. strings",
+//       "2. alerts",
+//       "3. numbers",
+//       "4. boolean"
+//     ],
+//     correctChoices: [1],
+// }
 
-var question2 = {
-    questionText: "The condition in an if / else statement is enclosed within __________.",
-    choices: [
-      // Correct answer is "3. parentheses"
-      "1. quotes",
-      "2. curly brackets",
-      "3. parentheses",
-      "4. square brackets"
-    ],
-    correctChoices: [2],
-}
+// var question2 = {
+//     questionText: "The condition in an if / else statement is enclosed within __________.",
+//     choices: [
+//       // Correct answer is "3. parentheses"
+//       "1. quotes",
+//       "2. curly brackets",
+//       "3. parentheses",
+//       "4. square brackets"
+//     ],
+//     correctChoices: [2],
+// }
 
-// Function that lets user know if their answer is correct
-function answerTrue() {
+// //----------//
+// questionArray = [
+//     question1,
+//     question2,
+//     // question3,
+//     // question4,
+//     // question5
+// ];
 
-}
 
-//----------
-questionArray = [
-    question1,
-    question2,
-    // question3,
-    // question4,
-    // question5
-];
-
+//-----Displaying questions content-----//
 
 // Starts quiz when button is clicked
 startQuiz.addEventListener("click", displayContent);
-
-//-----Displaying questions content-----//
 
 // Function to set display from none to visible
 var sectionEl = document.querySelectorAll("section")
@@ -96,13 +91,15 @@ var questionContainerEl = sectionEl[1]
 function displayContent() {
     titleEl.classList.add("hidden");
     questionContainerEl.classList.remove("hidden");
+    
     var correctAnswer = document.querySelectorAll(".correct")
     var wrongAnswer = document.querySelectorAll(".wrong")
+    var answerStatus = document.getElementById("answer-status")
     if(correctAnswer) {
-        show.textContent = "Correct!"
+        answerStatus.textContent = "Correct!"
     };
     if(wrongAnswer) {
-        show.textContent = "Wrong"
+        answerStatus.textContent = "Wrong"
     }
 };
     
@@ -113,46 +110,40 @@ function displayQuestion(questionInput) {
 
 };
 
-//----------//
-var array2 = [
-  // Correct answer: parentheses
-  "quotes",
-  "curly brackets",
-  "parentheses",
-  "square brackets"
-];
+function nextQuestion() {
 
-//----------
+}
 
-// Styling all buttons.
+
+//-----Button Styling-----//
+
+// Styling all buttons on webpage
 var btn = document.querySelectorAll("button");
 for (var i = 1; i < btn.length; i++) {
     btn[i].setAttribute("style", "background-color: #330582; color: #fff; margin: 2px");
 }
-//----------
 
+var styleSubmitEl = document.getElementById("submit")
+styleSubmitEl.setAttribute("style", "background-color: #330582; color: #fff; margin: 2px");
 
-
-
-
+//-----Submit Initials-----//
 // Submit button after user inputs their initials.
 var submitEL = document.getElementById("submit-initials");
-
-function submitInitials(event) {
-    // Prevents default action of refreshing the page
-    event.preventDefault();
-    var inputedInitials = " ";
-    submitEL.textContent = inputedInitials;
-}
-
-
+var submitBtnEl = document.getElementById("submit-btn");
+var inputedInitials = document.getElementById("input-data")
 // Storing initials in local storage
 var initials = document.getElementById("stored-data");
 var displayInitials = localStorage.getItem("initials");
+var highscoreSection = document.querySelector("highscore")
 
-function submitInitials() {
-initials.textContent = displayInitials;
+
+// Function to store
+function submitInitials(e) {
+    // Prevents default action of refreshing the page
+    e.preventDefault();
+    var inputedInitials = "".valueOf;
+    submitEL.textContent = inputedInitials;
+    highscoreSection.classList.remove("hidden");
+
+    localStorage.setItem()
 }
-
-// When user clicks submit, they will be taken to the page of the highscores.
-submitEL.addEventListener("click", submitInitials);
